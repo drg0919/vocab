@@ -38,7 +38,7 @@ const Header = (props) => {
     const [search, setSearch] = useState(false);
     const [term,setTerm] = useState('');
     const handleChange = (eve) => {
-        const v = eve.target.value?eve.target.value.toLowerCase():null;
+        const v = eve.target.value?eve.target.value.toLowerCase():'';
         setTerm(eve.target.value);
         props.changeSearch(v);
     }
