@@ -38,8 +38,9 @@ const Header = (props) => {
     const [search, setSearch] = useState(false);
     const [term,setTerm] = useState('');
     const handleChange = (eve) => {
+        const v = eve.target.value?eve.target.value.toLowerCase():null;
         setTerm(eve.target.value);
-        props.changeSearch(eve.target.value);
+        props.changeSearch(v);
     }
     const disableSearch = () => {
         setTerm('');
