@@ -95,7 +95,7 @@ const WordList = (props) => {
                 </DialogContent>
                 <DialogActions>
                     {!props.modalLoad&&<Button onClick={handleSubmit} color="primary">Add</Button>}
-                    {!props.modalLoad&&<Button onClick={props.closeInputModal} color="primary">Cancel</Button>}
+                    {!props.modalLoad&&<Button onClick={() => {setW(null) ; props.closeInputModal();}} color="primary">Cancel</Button>}
                     {props.modalLoad&&<CircularProgress color="primary" />}
                 </DialogActions>
                 </>}
